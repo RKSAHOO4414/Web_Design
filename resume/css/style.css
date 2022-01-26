@@ -1,0 +1,106 @@
+*{
+	margin: 0;
+	padding: 0;
+	top: 20px;
+}
+
+#a{
+	top: 20px;
+}
+
+#name{
+	font-size: 40px;
+	font-family: Times New Roman;
+	color: white;
+}
+#name1{
+	font-size: 20px;
+	font-family: Baskerville Old Face;
+}
+
+#loading{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	background: #262626 url('http://2.bp.blogspot.com/-OppefDeiUDA/UVwLAL_B_mI/AAAAAAAAPO4/y8T9CPORHq4/s1600/loadersz.gif') no-repeat center;
+	z-index: 99999;
+
+}
+
+/*#loading{
+	border: 16px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 16px solid blue;
+	border-right: 16px solid green;
+	border-bottom: 16px solid red;
+	border-left: 16px solid pink;
+	width: 120px;
+	height: 120px;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+	
+	
+}
+@-webkit-keyframes spin{
+	0%{
+		-webkit-transform: rotate(0deg);
+	}
+	100%{
+		-webkit-transform: rotate(360deg);
+	}
+}
+@keyframes spin{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}*/
+
+.bg-black{
+	background-color: black;
+}
+
+img{
+	width: 100%;
+	height: 100%;
+}
+
+.font-div{
+	width: 30%;
+}
+
+/*
+//// Resposive ////*/
+@media only screen and (min-width: 991px){
+	.font-div{
+		padding: 79px 0px!important;
+	}
+}
+
+#f{
+	height: 120px;
+}
+#home{
+	cursor: pointer;
+}
+#resume{
+	cursor: pointer;
+}
+#work{
+	cursor: pointer;
+}
+#contact{
+	cursor: pointer;
+}
+
+/*.b{
+	background-image: url("img/1.jpg");
+}*/
+#z{
+	color: blue;
+}
+.box{
+	width: 600px;
+}

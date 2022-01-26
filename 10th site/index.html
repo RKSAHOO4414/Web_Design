@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Gallery</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div id="img-box" class="small">
+		<div class="shadow1"></div>
+		<div class="shadow2"></div>
+		<img src="img/1.jpg" id="smallimg">
+	</div>
+	<div class="ImageList">
+		<ul>
+			<li onclick="onwbsite()">website</li>
+			<li onclick="onwbsite1()">website1</li>
+			<li onclick="onwbsite2()">website2</li>
+			<li onclick="onwbsite3()">website3</li>
+		</ul>
+	</div>
+
+	<div class="btn-box" onclick="imageSize()">
+		<span id="btnIcon">&#9776;</span>
+	</div>
+
+	<script type="text/javascript">
+		var SmallImg=document.getElementById('smallimg');
+		var imgBox=document.getElementById('img-box');
+		var menuIcon=document.getElementById('btnIcon');
+
+		function onwbsite() {
+			SmallImg.src="img/1.jpg";
+		}
+		function onwbsite1() {
+			SmallImg.src="img/2.jpg";
+		}
+		function onwbsite2() {
+			SmallImg.src="img/5.jpg";
+		}
+		function onwbsite3() {
+			SmallImg.src="img/2.jpg";
+		}
+
+		function imageSize(){
+			if (imgBox.className == "small") {
+				imgBox.className= "full";
+			}
+			else{
+				imgBox.className = "small";
+				
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>circular menu</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="jquery.js"></script>
+</head>
+<body>
+	<div class="nav-container">
+		<nav>
+		<div class="b-circle"></div>
+			<div class="nav-icon">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<ul>
+				<li><div class="link-name">Home</div><a href="#">H</a></li>
+				<li><div class="link-name">Contact</div><a href="#">C</a></li>
+				<li><div class="link-name">Service</div><a href="#">S</a></li>
+				<li><div class="link-name">Work</div><a href="#">W</a></li>
+			</ul>
+		</nav>
+	</div>
+</body>
+</html>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.nav-icon').on('click',function(){
+			$('nav ul').toggle();
+			$('nav ul li').each(function(i){
+				setTimeout(function(){
+					$('nav ul li').eq(i).css('display','block');
+				},100*i); 
+			});
+		});
+	});
+</script>

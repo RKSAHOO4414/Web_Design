@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h2 style="text-align: center; font-size: 40px; font-family: verdana; color: red;">My Friends</h2>
+
+<center><input type="text" style="height: 30px; width: 1200px;" id="myinput" placeholder="names ...." onkeyup="serarchFun()"></input></center>
+
+<table width="100%" id="mytable">
+	<tr class="header">
+		<td><b>Name</b></td>
+		<td><b>Degree</b></td>
+		<td><b>Profession</b></td>
+	</tr>
+	<tr>
+		<td>Ranjan</td>
+		<td>MCA</td>
+		<td>Software</td>
+	</tr>
+	<tr>
+		<td>Santosh</td>
+		<td>BCA</td>
+		<td>Hardware</td>
+	</tr>
+	<tr>
+		<td>Badhiari</td>
+		<td>Bsc</td>
+		<td>Mal practice</td>
+	</tr>
+	<tr>
+		<td>Biswajit</td>
+		<td>MBA</td>
+		<td>Finace</td>
+	</tr>
+	<tr>
+		<td>Krishna</td>
+		<td>Costing</td>
+		<td>Chatard</td>
+	</tr>
+</table>
+
+<script>
+	const serarchFun = () =>{
+		let filter = document.getElementById('myinput').value.toUpperCase();
+
+		let mytable = document.getElementById('mytable');
+
+		let tr = mytable.getElementsByTagName('tr');
+
+		for (var i = 0; i < tr.length; i++) {
+			let td = tr[i].getElementsByTagName('td')[0];
+
+			if (td) {
+				let textvalue = td.textContent || td.innerHTML;
+
+				if (textvalue.toUpperCase().indexOf(filter) > -1) {
+					tr[i].style.display = "";
+				}else{
+					tr[i].style.display = "none"; 
+				}
+			}
+		}
+	}
+</script>
+
+</body>
+</html>
